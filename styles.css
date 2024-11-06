@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#container {
+    width: 80%;
+    max-width: 750px;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 1.8em;
+    color: #333;
+}
+
+#timer {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #4caf50;
+}
+
+#word-display {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #3f51b5;
+    margin-bottom: 20px;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #388e3c;
+}
+
+#score {
+    font-size: 1.2em;
+    color: #333;
+}
+
+#instructions {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    #timer {
+        font-size: 1.1em;
+    }
+
+    #word-display {
+        font-size: 2em;
+    }
+
+    .options {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+
+    #score {
+        font-size: 1.1em;
+    }
+
+    #instructions {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    #container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+
+    #timer {
+        font-size: 1em;
+    }
+
+    #word-display {
+        font-size: 1.8em;
+    }
+
+    .options {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
+
+    #score {
+        font-size: 1em;
+    }
+
+    #instructions {
+        font-size: 0.9em;
+    }
+}
