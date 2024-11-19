@@ -1,9 +1,11 @@
 let timer;
 let score = 0;
+let errors = 0;
 let gameInterval;
 let gameActive = false;
 let wordDisplay = document.getElementById('word-display');
 let scoreDisplay = document.getElementById('score');
+let errorsDisplay = document.getElementById("errors")
 let timerDisplay = document.getElementById('timer');
 let startButton = document.getElementById('startBtn');
 let optionsContainer = document.getElementById('options');
@@ -22,10 +24,13 @@ function startGame() {
     if (gameActive) return;  // Evita que inicie el juego si ya está activo
     gameActive = true;
     score = 0;
+    errors = 0; // Reiniciar los errores al inicio del juego
     scoreDisplay.textContent = 'Puntos: 0';
+    errorsDisplay.textContent = 'Errores: 0'; // Mostrar los errores iniciales
     wordIndex = 0;
     document.getElementById("timer").classList.remove("hidden");
     document.getElementById("score").classList.remove("hidden");
+    document.getElementById("errors").classList.remove("hidden");
     document.getElementById("startBtn").classList.add("hidden");
     document.getElementById("instructions").classList.add("hidden");
 
@@ -115,6 +120,9 @@ function checkAnswer(selectedWord, correctWord) {
     if (selectedWord === correctWord) {
         score++;
         scoreDisplay.textContent = 'Puntos: ' + score;
+    } else {
+        errors++; // Incrementar los errores si la respuesta es incorrecta
+        errorsDisplay.textContent = 'Errores: ' + errors; // Actualizar la visualización de errores
     }
 
     // Mostrar la siguiente palabra
